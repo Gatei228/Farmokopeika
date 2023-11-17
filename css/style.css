@@ -133,7 +133,6 @@ nav {
     margin: 0 auto;
     position: relative;
     height: 1000px;
-    
 }
 /* фон */
 .elips-1{
@@ -142,23 +141,23 @@ nav {
     width: 604px;
     height: 604px;
     background-color: rgba(77, 47, 130, 0.2);
-    right: -152px;
+    left: -202px;
     top: 20px;
     border-radius: 100%;
 }
-.family{
+/* .family{
     position: absolute;
     z-index: 1;
     width: 604px;
     height: 604px;
-    /* background-image: url(../img/семья\ 1920.png) ; */
+    
     background-color: rgba(131, 208, 143, 0.2);
-    left: -202px;
+    right: -152px;
     
     top: 30px;
     border-radius: 100%;
     overflow-x: hidden;
-}
+} */
 .prize{
     position: absolute;
     z-index: 2;
@@ -243,9 +242,10 @@ nav {
         height: 34px;
     }
     nav{
-        max-width: 1280px;
-        
-        
+        max-width: 1300px;
+    }
+    .prize{
+        font-size: 190px;
     }
     
 }
@@ -258,7 +258,7 @@ nav {
         height: 31px;
     }
     nav{
-        max-width: 1160px;
+        max-width: 1180px;
         
         
     }
@@ -272,11 +272,11 @@ nav {
         height: 31px;
     }
     nav{
-        max-width: 1160px;
+        max-width: 1180px;
         
     }
 }
-@media (max-width: 1166px){
+@media (max-width: 1210px){
     nav ul, .button_promo_code{
         display:none
     }
