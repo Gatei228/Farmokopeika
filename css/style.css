@@ -35,7 +35,7 @@
     src :url(font/Raleway/static/Raleway-Regular.ttf) 
 }
 @font-face {
-    font-family: 'AlayaRoza';
+    font-family: 'Alaya Roza';
     line-height: 200;
     font-variant-numeric: lining-nums proportional-nums;
     src :url(font/AlayaRoza-Regular.ttf) 
@@ -109,123 +109,150 @@ nav ul{
     justify-content: space-between;
 }
 nav {
-    margin-left: 120px;
-    margin-right: 120px;
-    max-width: 1680px;
+    
+    max-width: 1749px;
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    
     align-items: center;
     justify-content: space-between;
+
     border-radius: 12px;
     background-color: #f0f0f0;
     padding: 10px 10px 10px 20px;
 }
 
+
+
 .burger-checkbox,.burger{
-    display: none;
+    display: none
 }
 
-.content_1{
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
-    height: 1000px;
-}
-/* фон */
-.elips-1{
-    position: absolute;
-    z-index: 1;
-    width: 604px;
-    height: 604px;
-    background-color: rgba(77, 47, 130, 0.2);
-    left: -202px;
-    top: 20px;
-    border-radius: 100%;
-}
-/* .family{
-    position: absolute;
-    z-index: 1;
-    width: 604px;
-    height: 604px;
-    
-    background-color: rgba(131, 208, 143, 0.2);
-    right: -152px;
-    
-    top: 30px;
-    border-radius: 100%;
-    overflow-x: hidden;
-} */
+
 .prize{
-    position: absolute;
-    z-index: 2;
-    font-family: Raleway-ExtraBold;
+    color: #FFF;
+
     font-variant-numeric: lining-nums proportional-nums;
-    top: 35px;
-    left: 115px;
+    text-shadow: 4px 4px 50px rgba(88, 43, 149, 0.20);
+    font-family: Raleway-ExtraBold;
     font-size: 270px;
+    font-style: normal;
+    margin-left: 86px;
+    margin-top: 40px;
     font-weight: 800;
-    color: #ffffff;
+    line-height: 80%; /* 216px */
+    letter-spacing: -5.4px;
+    text-transform: uppercase;
 }
 
-.HA_PUT{
-    position: absolute;
-    font-family: Raleway-Bold;
-    font-weight: 700;
-    font-size: 48px;
-    color: #ffffff;
-    top: 390px;
-    left: 115px;
-    display: flex;
-    gap: 40px;
-    line-height: 0.7;
+.content1_eliment1{
+    
+    color: #FFF;
     font-variant-numeric: lining-nums proportional-nums;
-}
-.p23-30{
     font-family: Raleway-ExtraBold;
-    font-weight: 800;
-    line-height: 1;
     font-size: 18px;
-    text-align: center;
-    vertical-align: middle;
-    font-variant-numeric: lining-nums proportional-nums;
-}
-
-.catch{
-    position: absolute;
-    top: 490px;
-    left: 115px;
-    font-size: 136px;
-    font-variant-numeric: lining-nums proportional-nums;
-    color: #400F65;
-}
-.catch_text4 {
-    font-size: 22px;
+    font-style: normal;
+    line-height: 110%; /* 19.8px */
+    text-transform: uppercase;
+    margin-left:86px;
+    margin-top: 34px;
     display: flex;
     gap: 40px;
+
 }
-.catch_text2{
-    font-family: AlayaRoza;
+
+.content1_eliment1_1{
+    font-family:Raleway-Bold;
+    font-size: 48px;
+    line-height: 80%; /* 19.8px */
+}
+
+.content1_eliment2{
+    color: #400F65;
+    font-family: Raleway-Bold;
+    font-size: 136px;
+    margin-top: 20px;
+    margin-left:86px;
+    font-style: normal;
+    line-height: 100%; /* 163.2px */
+    text-transform: uppercase;
+}
+
+
+.content1_eliment2_1{
+    color: #400F65;
+    font-family: Alaya Roza;
     font-size: 260px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 260px */
-    line-height: 0.6;
+    margin-bottom: -40px;
     text-transform: lowercase;
 }
 
-.catch_text3{
-    line-height: 0.6;
+
+/* фон */
+.content1{
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 100vw;
+
+    background: url(../img/Group\ 127.png) top 40px left -155px / 604px 930px no-repeat,
+
+    url(../img/семья\ 1920.png) top 34px right -160px / 988px 1334px no-repeat,
+
+    url(../img/Group\ 130.png) top 905px left 10vw / 620px 395px no-repeat,
+    url(../img/Group\ 124.png) top 635px right 35.7vw / 485px 545px no-repeat,
+
+
+
+    url(../img/Ellipse\ 14.png) top 0px right -215px / 1894px no-repeat;
+
 }
-.catch_text1,.catch_text3{
-    font-family: Raleway-Bold;
+
+
+/* форма */
+
+.bg-popup{
+    display: none;
+
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1114px;
+    height: 871px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 0 100vw 100vw rgba(64, 15, 101, 0.50);;
+    
 }
-.catch_text4 {
-    margin-top: 30px;
-    font-family: Raleway-SemiBold;
+
+.popup{
+    width: 470px;
+    height: 691px;
+    margin: 90px auto;
 }
+
+.popup .close-btn{
+    position: absolute;
+    top: 44px;
+    right: 44px;
+    width: 21px;
+    height: 21px;
+    padding: 10px;
+    line-height: 40%;
+    letter-spacing: -10px;
+    font-size: 50px;
+    
+}
+
+
 
 
 
@@ -235,18 +262,36 @@ nav {
 
 @media (max-width: 1920px){
     .button, .button_promo_code, .telephone{
-        font-size: 16px;
+        font-size: 1vw;
     }
     .logo{
         width: 228px;
         height: 34px;
     }
     nav{
-        max-width: 1300px;
+        max-width: 90vw;
     }
     .prize{
-        font-size: 190px;
+        font-size: 14.06vw;
+        margin-left: 4.5vw;
     }
+    .content1_eliment{
+        font-size: 0.94vw;        
+    }
+    .content1_eliment_1{
+        font-size: 2.40vw;        
+    }
+
+    .content1_eliment2{
+        margin-left:4.5vw;
+    }
+    .content1_eliment2{
+        font-size: 7.08vw;
+    }
+    .content1_eliment2_1{
+        font-size: 14.06vw;
+    }
+   
     
 }
 @media (max-width: 1440px){
@@ -258,7 +303,7 @@ nav {
         height: 31px;
     }
     nav{
-        max-width: 1180px;
+        max-width: 94vwpx;
         
         
     }
@@ -272,11 +317,11 @@ nav {
         height: 31px;
     }
     nav{
-        max-width: 1180px;
+        max-width: 94vw;
         
     }
 }
-@media (max-width: 1210px){
+@media (max-width: 1170px){
     nav ul, .button_promo_code{
         display:none
     }
@@ -294,15 +339,15 @@ nav {
         
       }
       nav{
-        z-index: 1;
+        z-index: 2;
       }
       .logo{
-        z-index: 1;
+        z-index: 2;
       }
 
       .burger {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         cursor: pointer;
         display: block;
         position: relative;
@@ -341,14 +386,14 @@ nav {
         position: absolute;
         display: grid;
         gap: 12px;
-        padding: 92px 0 10px 0px ;
+        padding: 92px 0 100vw 0px ;
         margin: 0;
         background: rgba(64, 15, 101, 1);
         list-style-type: none;
         transform: translateX(-100%);
         transition: .3s;
         width: 100%;
-        z-index: 0;
+        z-index: 1;
       }
       .button,.telephone{
         display: block;
@@ -392,7 +437,7 @@ nav {
         
     }
 }
-@media (max-width: 320px){}
+
 
 
 

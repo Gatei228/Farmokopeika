@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.maskedinput.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фармакопеика</title>
     <link rel="stylesheet" href="css/reset.css">
@@ -28,31 +30,83 @@
             
             <p class="button_promo_code">Зарегистрировать промокод</p>
         </nav>
+        <div class="bg-popup">
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                <div class="form">
+                    <h1>Регистрация промокода</h1>
+                    <div class="form_element">
+                        <label for="Фамилия">Фамилия*</label>
+                        <input type="text" id="Surname" placeholder="Введите Фамилию">
+                    </div>
+
+                    <div class="form_element">
+                        <label for="Name">Имя*</label>
+                        <input type="text" id="Name" placeholder="Введите Имя">
+                    </div>
+
+                    <div class="form_element">
+                        <label for="phone">Телефон*</label>
+                        <input type="text" id="phone" placeholder="+7(___) ___-__-__">
+                        <script>
+                            $(function(){
+                                $("#phone").mask("+7(999) 999-99-99");
+                            });
+                        </script>
+                    </div>
+
+                    <div class="form_element">
+                        <label for="Тел">Промокаод*</label>
+                        <div id="pole_promocode">
+                            <input type="text" id="promocode">
+                        </div>
+                        <button id="add">+ Дабвить еще промокод</button>
+                        <script>
+                            $(function() {
+                                $("#add").click(function(e) {
+                                    e.preventDefault();
+                                    $("#pole_promocode").append("<input type='text' id='promocode'>");
+                                });
+                            });
+                        </script>
+
+                    </div>
+                    <div class="form_element">
+                        <input type="checkbox" id="rules">
+                        <label for="rules ">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                    </div>
+
+                    <div class="form_element">
+                        <input type="checkbox" id="rules">
+                        <label for="rules ">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
+                    </div>
+                    <div class="form_element">
+                        <button>Зарегистрировать промокод</button>
+                    </div>
+
+                    <div class="form_element">
+                        <p>Телефон технической поддержки <a href="tel:88002009707">8-800-200-97-07</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>    
     </div>
-    <div class="content_1">
-        <div class="family"></div>
-        <div class="elips-1"></div>
+    <div class="content1">
         <p class="prize">200 000 ₽</p>
+        <div class="content1_eliment1">
+            <p class="content1_eliment1_1">НА ПУТЕШЕСТВИЯ</p>
+            <p>C 23 ОКТЯБРЯ <br>
+            ПО 30 НОЯБРЯ</p>
+        </div>
+        <div class="content1_eliment2">
+            <p>ЛОВИ СВОЙ</p>
+            <p class="content1_eliment2_1">ЖЕЛАННЫЙ</p>
+            <p>ПОДАРОК</p>
+        </div>
+
+
         
-        <div class="HA_PUT">
-            <p>НА ПУТЕШЕСТВИЕ</p>
-            <div class="p23-30">
-                <p class="23">С 23 ОКТЯБРЯ <br>ПО 30 НОЯБРЯ</p>
-            </div>
-
-        </div>
-        <div class="catch">
-            <p class="catch_text1">ЛОВИ СВОЙ</p>
-            <p class="catch_text2">ЖЕЛАННЫЙ</p>
-            <p class="catch_text3">ПОДАРОК</p>
-            <div class="catch_text4">
-                <p>Розыгрыш состоится 01.12 <br>
-                    в прямом эфире Вконтакте</p>
-
-                <p>Победители будут указаны <br>
-                    в разделе «Победители»</p>
-            </div>
-        </div>
     </div>
     
 
