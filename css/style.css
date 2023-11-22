@@ -217,7 +217,7 @@ nav {
 /* форма */
 
 .bg-popup{
-    display: none;
+    
 
     z-index: 3;
     position: absolute;
@@ -249,8 +249,34 @@ nav {
     line-height: 40%;
     letter-spacing: -10px;
     font-size: 50px;
-    
+    cursor: pointer;
 }
+
+.form h1{
+    text-align: center;
+
+    color: #7351A6;
+    text-align: center;
+    font-family: Raleway-Bold;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 160%; /* 51.2px */
+}
+
+.popup .form .form_element{
+    padding: 15px 0 ;
+}
+
+.popup .form .form_element input[type="text"],
+.popup .form .form_element input[type="phone"]{
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+
+    padding: 12px 16px;
+    border-radius: 18px;
+}
+
 
 
 
