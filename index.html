@@ -28,57 +28,59 @@
             </nav>
         </div>
         <div id="popup" class="bg-popup">
-            <div class="popup">
-                <div id="close-btn" class="close-btn">&times;</div>
-                <div class="form">
-                    <h1>Регистрация промокода</h1>
-                    <div class="form_div_1">
-                        <div class="flex_div_1">
-                            <div class="form_element">
-                                <label for="surnameId">Фамилия*</label>
-                                <input type="text" id="surnameId"  placeholder="Введите Фамилию" required>
-                            </div>
-                            <div class="form_element">
-                                <label for="nameId">Имя*</label>
-                                <input type="text" id="nameId" placeholder="Введите Имя" required>
-                            </div>
-                            <div class="form_element">
-                                <label for="phoneId">Телефон*</label>
-                                <input type="phone" class="inputTel" id="phoneId" placeholder="+7(___) ___-__-__" required>
-                            </div>
-                            <div class="form_element">
-                                <label for="promocodeId">Промокод*</label>
-                                <div class="promocode_pole" id="pole_promocode">
-                                    <input type="text" id="promocodeId" required>
+            <div class="bg-popup-scrol">
+                <div class="popup">
+                    <div id="close-btn" class="close-btn">&times;</div>
+                    <div class="form">
+                        <h1>Регистрация промокода</h1>
+                        <div class="form_div_1">
+                            <div class="flex_div_1">
+                                <div class="form_element">
+                                    <label for="surnameId">Фамилия*</label>
+                                    <input type="text" id="surnameId"  placeholder="Введите Фамилию" required>
                                 </div>
-                                <div class="add">
-                                    <div class="plus">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                            <rect width="20" height="20" transform="translate(0.710938 0.148438)" fill="white"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7109 4.14844H10.7109V10.1484H4.71094V11.1484H10.7109V17.1484H11.7109V11.1484H17.7109V10.1484H11.7109V4.14844Z" fill="black"/>
-                                        </svg>
+                                <div class="form_element">
+                                    <label for="nameId">Имя*</label>
+                                    <input type="text" id="nameId" placeholder="Введите Имя" required>
+                                </div>
+                                <div class="form_element">
+                                    <label for="phoneId">Телефон*</label>
+                                    <input type="phone" class="inputTel" id="phoneId" placeholder="+7(___) ___-__-__" required>
+                                </div>
+                                <div class="form_element">
+                                    <label for="promocodeId">Промокод*</label>
+                                    <div class="promocode_pole" id="pole_promocode">
+                                        <input type="text" id="promocodeId" required>
                                     </div>
-                                    <button id="add">Дабвить еще промокод</button>
+                                    <div class="add">
+                                        <div class="plus">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <rect width="20" height="20" transform="translate(0.710938 0.148438)" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7109 4.14844H10.7109V10.1484H4.71094V11.1484H10.7109V17.1484H11.7109V11.1484H17.7109V10.1484H11.7109V4.14844Z" fill="black"/>
+                                            </svg>
+                                        </div>
+                                        <button id="add">Дабвить еще промокод</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_div_2">
+                                <div class="form_element">
+                                    <input type="checkbox" id="rules">
+                                    <label for="rules">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                                </div>
+                                <div class="form_element">
+                                    <input type="checkbox" id="rules2">
+                                    <label for="rules2">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex_div_2">
+                        <div class="form_div_2">
                             <div class="form_element">
-                                <input type="checkbox" id="rules">
-                                <label for="rules">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                                <button id="peg">Зарегистрировать промокод</button>
                             </div>
                             <div class="form_element">
-                                <input type="checkbox" id="rules2">
-                                <label for="rules2">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
+                                <p>Телефон технической поддержки</p><a href="tel:88002009707">8-800-200-97-07</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form_div_2">
-                        <div class="form_element">
-                            <button id="peg">Зарегистрировать промокод</button>
-                        </div>
-                        <div class="form_element">
-                            <p>Телефон технической поддержки</p><a href="tel:88002009707">8-800-200-97-07</a>
                         </div>
                     </div>
                 </div>

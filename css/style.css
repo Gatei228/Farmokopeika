@@ -225,7 +225,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1114px;
-    max-height:   937px;
+    max-height: 937px;
     background-color: #fff;
     margin: 0 auto;
     border-radius: 18px;
@@ -233,13 +233,23 @@ nav {
     visibility: hidden;
     opacity: 0;
 }
+
+
 .bg-popup.open{
     visibility: visible;
     opacity: 1;
 }
+.bg-popup-scrol{
+    
+    overflow-y: auto;
+    max-height: 877px;
+    margin: 18px;
+
+}
+
 .popup{
     width: 470px;
-    margin: 90px auto;
+    margin: 55px auto;
 }
 .popup .close-btn{
     position: absolute;
@@ -577,6 +587,14 @@ nav {
 
 
 
+@media (max-height:1000px){
+    .bg-popup.open {
+        max-height: 93.70vh;
+    }
+    .bg-popup-scrol{
+        max-height: 87.70vh;
+    }
+}
 
 
 

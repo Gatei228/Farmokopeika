@@ -2,11 +2,11 @@
 function phone() {
     var inp = document.getElementById('phoneId');
     if(inp.value === "") {
-            inp_tel.style.borderColor =  "rgb(255, 0, 0)";
+            inp.style.borderColor =  "rgb(255, 0, 0)";
             console.log("cerf")
         }
     else{
-            inp_tel.style.borderColor =  "rgb(0, 255, 0)";
+            inp.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
     setInterval( phone ,1000)
@@ -14,10 +14,10 @@ function phone() {
 function name() {
     var inp = document.getElementById('nameId');
     if(inp.value === "") {
-            inp_tel.style.borderColor =  "rgb(255, 0, 0)";
+            inp.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
-            inp_tel.style.borderColor =  "rgb(0, 255, 0)";
+            inp.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
     setInterval( name ,1000)
@@ -25,10 +25,10 @@ function name() {
 function surname() {
     var inp = document.getElementById('surnameId');
     if(inp.value === "") {
-            inp_tel.style.borderColor =  "rgb(255, 0, 0)";
+            inp.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
-            inp_tel.style.borderColor =  "rgb(0, 255, 0)";
+            inp.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
     setInterval( surname ,1000)  
@@ -36,10 +36,10 @@ function surname() {
 function promocode() {
     var inp = document.getElementById('promocodeId');
     if(inp.value === "") {
-            inp_tel.style.borderColor =  "rgb(255, 0, 0)";
+            inp.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
-            inp_tel.style.borderColor =  "rgb(0, 255, 0)";
+            inp.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
     setInterval( promocode ,1000)
