@@ -1,7 +1,7 @@
 //проверка телефона
 function phone() {
-    var inp_tel = document.getElementById('phoneId');
-    if(inp_tel.value === "") {
+    var inp = document.getElementById('phoneId');
+    if(inp.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
             console.log("cerf")
         }
@@ -12,8 +12,8 @@ function phone() {
     setInterval( phone ,1000)
 //проверка имени 
 function name() {
-    var inp_tel = document.getElementById('nameId');
-    if(inp_tel.value === "") {
+    var inp = document.getElementById('nameId');
+    if(inp.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
@@ -23,8 +23,8 @@ function name() {
     setInterval( name ,1000)
 //проверка фамилия
 function surname() {
-    var inp_tel = document.getElementById('surnameId');
-    if(inp_tel.value === "") {
+    var inp = document.getElementById('surnameId');
+    if(inp.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
@@ -34,8 +34,8 @@ function surname() {
     setInterval( surname ,1000)  
 //проверка промокода 
 function promocode() {
-    var inp_tel = document.getElementById('promocodeId');
-    if(inp_tel.value === "") {
+    var inp = document.getElementById('promocodeId');
+    if(inp.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
         }
         else{
