@@ -3,13 +3,13 @@ function phone() {
     var inp_tel = document.getElementById('phoneId');
     if(inp_tel.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
+            console.log("cerf")
         }
-        else{
+    else{
             inp_tel.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
-    setInterval( phone() ,1000)
-
+    setInterval( phone ,1000)
 //проверка имени 
 function name() {
     var inp_tel = document.getElementById('nameId');
@@ -20,7 +20,7 @@ function name() {
             inp_tel.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
-    setInterval( name() ,1000)
+    setInterval( name ,1000)
 //проверка фамилия
 function surname() {
     var inp_tel = document.getElementById('surnameId');
@@ -31,11 +31,10 @@ function surname() {
             inp_tel.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
-    setInterval( surname() ,1000)
-      
+    setInterval( surname ,1000)  
 //проверка промокода 
 function promocode() {
-    var inp_tel = document.getElementById('promocode');
+    var inp_tel = document.getElementById('promocodeId');
     if(inp_tel.value === "") {
             inp_tel.style.borderColor =  "rgb(255, 0, 0)";
         }
@@ -43,14 +42,11 @@ function promocode() {
             inp_tel.style.borderColor =  "rgb(0, 255, 0)";
         }
     }
-    setInterval( promocode() ,1000)
+    setInterval( promocode ,1000)
 // маска 
     $(function(){
         $("#phoneId").mask("+7(999) 999-99-99");
     });
-
-
-
 //дабовление 
     $(function() {
         $("#add").click(function(e) {

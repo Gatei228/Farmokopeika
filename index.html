@@ -8,28 +8,25 @@
     <title>Фармакопеика</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
-
-
 </head>
 <body>
     <div class="header">
-        <nav>
-            <img class="logo" src="img/logo 1 (2).png" alt="logo">
-            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-            <label for="burger-checkbox" class="burger"></label>            
-            
-            <ul class="menu-list">  
-                <li><p class="telephone"><a href="tel:88002009707">8-800-200-97-07</a></p></li>
-                <li><p class="button">Призы</p></li>
-                <li><p class="button">Как выиграть</p></li>
-                <li><p class="button">Победители</p></li>
-                <li><p class="button">Вопросы и ответы</p></li>
-                <li><p class="button">Правила</p></li>
-            </ul>
-            
-            <p id="button_promo_code" class="button_promo_code">Зарегистрировать промокод</p>
-        </nav>
+        <div class="margin_nav">
+            <nav>
+                <img class="logo" src="img/logo 1 (2).png" alt="logo">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>            
+                <ul class="menu-list">  
+                    <li><a class="telephone" href="tel:88002009707">8-800-200-97-07</a></li>
+                    <li><a class="button">Призы</a></li>
+                    <li><a class="button">Как выиграть</a></li>
+                    <li><a class="button">Победители</a></li>
+                    <li><a class="button">Вопросы и ответы</a></li>
+                    <li><a class="button">Правила</a></li>
+                </ul>
+                <p id="button_promo_code" class="button_promo_code">Зарегистрировать промокод</p>
+            </nav>
+        </div>
         <div id="popup" class="bg-popup">
             <div class="popup">
                 <div id="close-btn" class="close-btn">&times;</div>
@@ -38,23 +35,22 @@
                     <div class="form_div_1">
                         <div class="flex_div_1">
                             <div class="form_element">
-                                <label for="surname">Фамилия*</label>
+                                <label for="surnameId">Фамилия*</label>
                                 <input type="text" id="surnameId"  placeholder="Введите Фамилию" required>
                             </div>
                             <div class="form_element">
-                                <label for="name">Имя*</label>
+                                <label for="nameId">Имя*</label>
                                 <input type="text" id="nameId" placeholder="Введите Имя" required>
                             </div>
                             <div class="form_element">
-                                <label for="phone">Телефон*</label>
+                                <label for="phoneId">Телефон*</label>
                                 <input type="phone" class="inputTel" id="phoneId" placeholder="+7(___) ___-__-__" required>
                             </div>
                             <div class="form_element">
-                                <label for="Тел">Промокод*</label>
+                                <label for="promocodeId">Промокод*</label>
                                 <div class="promocode_pole" id="pole_promocode">
-                                    <input type="text" id="promocode" required>
+                                    <input type="text" id="promocodeId" required>
                                 </div>
-
                                 <div class="add">
                                     <div class="plus">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -69,16 +65,14 @@
                         <div class="flex_div_2">
                             <div class="form_element">
                                 <input type="checkbox" id="rules">
-                                <label for="rules ">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                                <label for="rules">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
                             </div>
                             <div class="form_element">
-                                <input type="checkbox" id="rules">
-                                <label for="rules ">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
+                                <input type="checkbox" id="rules2">
+                                <label for="rules2">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
                             </div>
                         </div>
-
                     </div>
-
                     <div class="form_div_2">
                         <div class="form_element">
                             <button id="peg">Зарегистрировать промокод</button>
@@ -87,7 +81,6 @@
                             <p>Телефон технической поддержки</p><a href="tel:88002009707">8-800-200-97-07</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>    
@@ -104,12 +97,13 @@
             <p class="content1_eliment2_1">ЖЕЛАННЫЙ</p>
             <p>ПОДАРОК</p>
         </div>
-
-
-        
+        <div class="content1_eliment3">
+                <p>Розыгрыш состоится 01.12 <br> 
+                в прямом эфире Вконтакте</p>
+                <p>Победители будут указаны  <br>
+                в разделе «Победители»</p>
+        </div>
     </div>
-    
-
 <script src="main.js"></script>
 </body>
 </html>
