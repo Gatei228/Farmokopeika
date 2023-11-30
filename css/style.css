@@ -556,8 +556,8 @@ nav {
 }
 .TheMainPrize img{
     padding: 20px;
-    width: 1680px;
-    height: 306px;
+    max-width: 1680px;
+    max-width: 306px;
 }
 
 .TheMainPrize span{
