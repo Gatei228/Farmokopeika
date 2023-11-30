@@ -3,7 +3,6 @@ function phone() {
     var inp = document.getElementById('phoneId');
     if(inp.value === "") {
             inp.style.borderColor =  "rgb(255, 0, 0)";
-            console.log("cerf")
         }
     else{
             inp.style.borderColor =  "rgb(0, 255, 0)";
@@ -56,6 +55,9 @@ function promocode() {
     });
 //открытие popup
     document.getElementById("button_promo_code").addEventListener("click",function(){
+    document.getElementById("popup").classList.add("open");
+    });
+    document.getElementById("button_promo_code_2").addEventListener("click",function(){
     document.getElementById("popup").classList.add("open");
     });
 //закрытие popup

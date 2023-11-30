@@ -66,7 +66,8 @@ body{
 .button{
     font-weight: 600;
     font-family: Raleway-SemiBold;
-    color: rgba(64, 15, 101, 1); 
+    color: rgba(64, 15, 101, 1);
+    text-decoration: none;
 }
 .button_promo_code{
     padding: 20px 30px;
@@ -98,15 +99,15 @@ nav li{
     margin-right: 20px;
 }
 nav {
-    max-width: 1680px;
+    max-width: 1650px;
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-radius: 12px;
-    background-color: #f0f0f0;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,.8);
     padding: 10px 10px 10px 20px;
 }
 .burger-checkbox,.burger{
@@ -120,7 +121,7 @@ nav {
     font-family: Raleway-ExtraBold;
     font-size: 270px;
     font-style: normal;
-    margin-top: 40px;
+    padding-top: 40px;
     font-weight: 800;
     line-height: 80%; /* 216px */
     letter-spacing: -5.4px;
@@ -174,23 +175,18 @@ nav {
     color: #400F65;
 }
 /* фон */
-.content_centor{
-    max-width: 1680px;
-    margin: 0 auto;
-}
 .content_margin{
     margin: 0 auto;
     margin-left: 82px;
     margin-right: 82px;
 }
 
-
-.content1{
+.content{
     max-width: 2555px;
     overflow: visible;
     margin: 0 auto;
     position: relative;
-    height: 100vw;
+    height: 1000vw;
     background-color: #FFF;
     /* background: url(../img/Group\ 127.png) top 40px left -155px / 604px 930px no-repeat,
     url(../img/семья\ 1920.png) top 34px right -160px / 988px 1334px no-repeat,
@@ -198,12 +194,40 @@ nav {
     url(../img/Group\ 124.png) top 635px right 35.7vw / 485px 545px no-repeat,
     url(../img/Ellipse\ 14.png) top 0px right -215px / 1894px no-repeat; */
 
-    background: url(../img/Group\ 127.png) top 40px left 190px / 604px 930px no-repeat,
+    background: url(../img/Group\ 127.png) top 15px left 160px / 604px 930px no-repeat,
     url(../img/семья\ 1920.png) top 34px right 150px / 988px 1334px no-repeat,
     url(../img/Group\ 130.png) top 905px left 700px / 620px 395px no-repeat,
-    url(../img/Group\ 124.png) top 635px right 1000px / 485px 545px no-repeat,
-    url(../img/Ellipse\ 14.png) top -30px right -100px / 1894px no-repeat,
-    url(../img/Ellipse\ 16.png) top 1030px left 170px / 485px no-repeat;
+    url(../img/Group\ 124.png) top 635px right 1020px / 485px 545px no-repeat,
+    url(../img/Ellipse\ 14.png) top -60px right -130px / 2094px no-repeat,
+    url(../img/Ellipse\ 16.png) top 1030px left 170px / 485px no-repeat,
+
+    
+    url(../img/Group\ 91.png) top 2160px left 200px / 2159px 781px no-repeat,
+    
+    url(../img/Group\ 93.png) top 2350px left 220px / 536px 403px no-repeat,
+    url(../img/Group\ 92.png) top 1950px right 20% / 683px 613px no-repeat,
+    
+    url(../img/goldenconfetti2\ 1.png) top 2950px center / 2884px 1239px no-repeat,
+    
+    url(../img/gift\ 10.png) top 2800px left 25% / 227px 245px no-repeat,
+    
+    url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
+
+
+    url(../img/Ellipse\ 15.png) top 1000px left -90px / 2200px no-repeat;
+
+
+
+
+}
+.content_centor{
+    max-width: 1850px;
+    margin: 0 auto;
+    background: url(../img/gift\ 14.png) top 1860px left 55% / 194px 256px no-repeat,
+    
+    url(../img/ui_icon_34.png) top 3460px left 25% / 580px 476px no-repeat;
+
+
 }
 
 /* .prize ,.content1_eliment1,.content1_eliment2,.content1_eliment3{
@@ -240,11 +264,9 @@ nav {
     opacity: 1;
 }
 .bg-popup-scrol{
-    
     overflow-y: auto;
     max-height: 877px;
     margin: 18px;
-
 }
 
 .popup{
@@ -306,7 +328,9 @@ nav {
     flex-direction: column;
     gap: 6px;
 }
-.form_div_2 .form_element button {
+.form_div_2 .form_element button,
+.form_div_2 .form_element button:active
+    {
     background-color: rgba(115, 81, 166, 1);
     font-family: Raleway-SemiBold;
     color: #ffffff;
@@ -315,6 +339,8 @@ nav {
     padding: 20px 32px;
     width: 470px;
     height: 62px;
+    border: none;
+    outline: none;
 }
 .flex_div_1 .form_element{
     display: flex;
@@ -402,16 +428,171 @@ nav {
     font-family: Raleway-Regular ;
     font-variant-numeric: lining-nums proportional-nums;
 }  
-@media (max-width: 2555px){
-    .content1{
+/* ПРИЗЫ */
+.gift .gift__flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 76px;
+}
+.gift{
+    display: flex;
+    flex-direction: column;
+    gap: 98px;
+    margin-top: 319px;
+}
+.gift__element{
+    background-color: rgba(115, 81, 166, 0.2);
+    border-radius: 22px;
+    width: 405px;
+    height: 230px;
+    backdrop-filter: blur(8px);
+}
+
+.gift__element img{
+    transform: translateY(-70px);
+}
+.gift p , .howToPlay__element p{
+    font-size: 48px;
+    font-family: Raleway-Bold;
+    color: #fff;
+}
+.gift .gift__element p{
+    transform: translateY(-98px);
+    font-size: 28px;
+    font-family: Raleway-SemiBold;
+    color: rgba(64, 15, 101, 1);
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+
+}
+.gift__element p{
+    font-size: 28px;
+}
+/* КАК ВЫИГРАТЬ */
+.howToPlay{
+    margin-top: 179px;
+}
+.howToPlay__element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.howToPlay__element .date23-30{
+    font-size: 28px;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.component1 img{
+    width: 366px;
+    height: 252px;
+}
+.component1{
+    display: flex;
     
-        background: url(../img/Group\ 127.png) top 40px right calc(100vw / 1.455) / 604px 930px no-repeat,
+}
+.component3{
+    display: flex;
+    justify-content: end;
+}
+.component2{
+    display: flex;
+    justify-content: center;
+}
+.component2 img{
+    width: 227px;
+    height: 242px;
+    
+}
+.component1 p,.component2 p,.component3 p{
+    font-size: 32px;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway-Bold;
+    color: #ffffff;
+}
+.component1,.component2,.component3{
+    display: flex;
+    align-items: center;
+}
+.howToPlay__element3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_promo_code_2{
+    margin-top: 10px;
+    box-shadow: 0px 9.58653px 73.30875px 0px rgba(91, 33, 165, 0.80);
+    padding: 20px 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-weight: 700;
+    font-family: Raleway-Bold;
+    color: rgba(64, 15, 101, 1);
+    cursor: pointer;
+    font-size: 20px;
+}
+/* ГЛАВНЫЙ ПРИЗ */
+.TheMainPrize .TheMainPrize_text2{
+    float: right;
+}
+.TheMainPrize{
+    margin-top: 300px;
+}
+
+.TheMainPrize p{
+    color: #400F65;
+
+    font-family: Raleway-Bold;
+    font-size: 150px;
+    font-style: normal;
+    line-height: 120%; /* 180px */
+    text-transform: uppercase;
+    
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.TheMainPrize img{
+    padding: 20px;
+    width: 1680px;
+    height: 306px;
+}
+
+.TheMainPrize span{
+    color: #400F65;
+    font-family: Alaya Roza;
+    font-size: 285px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding-top: 50px;
+}
+
+@media (max-width: 2555px){
+    .content{
+    
+        background: url(../img/Group\ 127.png) top 15px right calc(100vw / 1.330) / 604px 930px no-repeat,
         url(../img/семья\ 1920.png) top 34px left calc(100vw / 1.786) / 988px 1334px no-repeat,
         url(../img/Group\ 130.png) top 905px left calc(100vw / 3.586) / 620px 395px no-repeat,
         url(../img/Group\ 124.png) top 635px left calc(100vw / 2.450) / 485px 545px no-repeat,
         url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 485px no-repeat,
-        url(../img/Ellipse\ 14.png) top 0px left calc(100vw / 3.586) / 1894px no-repeat;
+        url(../img/Ellipse\ 14.png) top 0px left calc(100vw / 3.586) / 1894px no-repeat,
     
+        
+        
+        url(../img/Group\ 91.png) top 2160px center / 2159px 781px no-repeat,
+
+        url(../img/Group\ 93.png) top 2350px right calc(100vw / 1.320) / 536px 403px no-repeat,
+        url(../img/Group\ 92.png) top 1950px left calc(100vw / 1.696) / 683px 613px no-repeat,
+
+        url(../img/goldenconfetti2\ 1.png) top 2950px center / 2884px 1239px no-repeat,
+
+        url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
+
+
+        url(../img/Ellipse\ 15.png) top 1000px right calc(100vw / 5.986) / 2200px no-repeat;
     }
     /* .prize ,.content1_eliment1,.content1_eliment2,.content1_eliment3{
         margin-left: calc(100vw / 1.586);
