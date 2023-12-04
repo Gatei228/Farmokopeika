@@ -50,9 +50,30 @@ function promocode() {
     $(function() {
         $("#add").click(function(e) {
             e.preventDefault();
-            $("#pole_promocode").focus().append("<input type='text' id='promocode' required>");
+            $("#pole_promocode").append("<input type='text' id='promocode' required>");
         });
     });
+// скрывать элимент
+      const a = new Date()
+      const b = new Date(2022, 11, 1)
+
+      if (a <= b){
+        var win = document.querySelector('.liWin');
+        win.style.display = "none";
+        var win = document.querySelector('.Winners');
+        win.style.display = "none";
+        var win = document.querySelector('.QuestionsAndAnswers');
+        win.style.marginTop = "500px"
+        console.log(win.style)
+
+      }
+// победители
+    for (let i = 0; i < 60; i++) {
+        $("#Winners_ul").append("<div class='Winners_ul_element'> <p class='WinName'>Кристина К</p><p class='WinTel'>+7(***)***-34-52</p><p class='WinGift'>Анатомическая подушка</p></div>");
+      }
+
+
+
 //открытие popup
     document.getElementById("button_promo_code").addEventListener("click",function(){
     document.getElementById("popup").classList.add("open");

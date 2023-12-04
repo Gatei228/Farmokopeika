@@ -210,8 +210,12 @@ nav {
     url(../img/goldenconfetti2\ 1.png) top 2950px center / 2884px 1239px no-repeat,
     
     url(../img/gift\ 10.png) top 2800px left 25% / 227px 245px no-repeat,
+    url(../img/Group\ 148.png) top 4700px left 20% / 227px 245px no-repeat,
     
+
     url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
+    
+    url(../img/gift\ 30.png) top 4300px right 400px / 305px 311px no-repeat,
 
 
     url(../img/Ellipse\ 15.png) top 1000px left -90px / 2200px no-repeat;
@@ -225,7 +229,7 @@ nav {
     margin: 0 auto;
     background: url(../img/gift\ 14.png) top 1860px left 55% / 194px 256px no-repeat,
     
-    url(../img/ui_icon_34.png) top 3460px left 25% / 580px 476px no-repeat;
+    url(../img/ui_icon_34.png) top 3660px left 25% / 696px 571px no-repeat;
 
 
 }
@@ -447,16 +451,19 @@ nav {
     border-radius: 22px;
     width: 405px;
     height: 230px;
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
 }
 
 .gift__element img{
     transform: translateY(-70px);
 }
-.gift p , .howToPlay__element p{
+.gift p , .howToPlay__element p , .Winners p, .QuestionsAndAnswers p{
     font-size: 48px;
     font-family: Raleway-Bold;
     color: #fff;
+}
+.QuestionsAndAnswers p{
+    margin-bottom: 20px;
 }
 .gift .gift__element p{
     transform: translateY(-98px);
@@ -540,26 +547,22 @@ nav {
 .TheMainPrize{
     margin-top: 300px;
 }
-
 .TheMainPrize p{
     color: #400F65;
-
     font-family: Raleway-Bold;
     font-size: 150px;
     font-style: normal;
     line-height: 120%; /* 180px */
     text-transform: uppercase;
-    
     display: flex;
     gap: 60px;
     align-items: center;
 }
 .TheMainPrize img{
     padding: 20px;
-    max-width: 1680px;
-    max-width: 306px;
+    max-width: 100%;
+    max-height: 306px;
 }
-
 .TheMainPrize span{
     color: #400F65;
     font-family: Alaya Roza;
@@ -569,6 +572,136 @@ nav {
     text-transform: lowercase;
     padding-top: 50px;
 }
+/* ПОБЕДИТЕЛИ */
+.Winners{
+    margin-top:497px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.Winners_element{
+    width: 1396px;
+    height: 432px;
+    border-radius: 18px;
+    background: rgba(115, 81, 166, 0.60);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Winners_ul{
+    width: 1336px;
+    height: 372px;
+    overflow-y: auto;
+}
+.Winners_ul_element p{
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway-Regular;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 160%; /* 38.4px */
+}
+.WinGift{
+    width: 380px;
+}
+.WinTel{
+    width: 200px;
+}
+.Winners_ul_element{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    width: 1302px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.Winners_ul::-webkit-scrollbar{
+    width: 4px;
+}
+.Winners_ul::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+}
+.Winners_ul::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+}
+/* ВОПРОСЫ И ОТВЕТЫ */
+.QuestionsAndAnswers{
+    margin-top:180px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.QuestionsAndAnswers details{
+    width: 1336px;
+    border-radius: 18px;
+    background: rgba(115, 81, 166, 0.60);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 30px;
+    font-variant-numeric: lining-nums proportional-nums;
+    animation-duration: 0.5s;
+    animation-name: fadeInDown2;
+    
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.25em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.25em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes rotait {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.QuestionsAndAnswers details[open]{
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+}
+.QuestionsAndAnswers details summary{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    font-family: Raleway-SemiBold ;
+    transition: .3s;
+}
+.QuestionsAndAnswers details[open] summary img{
+    animation-name: rotait;
+    animation-duration: 0.5s;
+}
+.QuestionsAndAnswers details p{
+    font-size: 24px;
+    font-family: Raleway-Regular;
+    transition: .3s;
+}
+
+
+
+
 
 @media (max-width: 2555px){
     .content{
@@ -591,8 +724,10 @@ nav {
 
         url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
 
+        url(../img/gift\ 30.png) top 4300px left calc(100vw / 1.386) / 305px 311px no-repeat,
 
-        url(../img/Ellipse\ 15.png) top 1000px right calc(100vw / 5.986) / 2200px no-repeat;
+
+        url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
     }
     /* .prize ,.content1_eliment1,.content1_eliment2,.content1_eliment3{
         margin-left: calc(100vw / 1.586);
