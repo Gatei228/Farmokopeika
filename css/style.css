@@ -43,7 +43,9 @@
 
 body{
     background-color: #835FB5;
-    margin: 0 auto;   
+    margin: 0 auto; 
+    font-variant-numeric: lining-nums proportional-nums;
+    
 }
 
 .header{
@@ -97,6 +99,9 @@ nav li{
     margin: 0 auto;
     margin-left: 20px;
     margin-right: 20px;
+}
+.date23-30_3 {
+    display: none;
 }
 nav {
     max-width: 1650px;
@@ -186,7 +191,8 @@ nav {
     overflow: visible;
     margin: 0 auto;
     position: relative;
-    height: 1000vw;
+    padding-bottom: 200px;
+    
     background-color: #FFF;
     /* background: url(../img/Group\ 127.png) top 40px left -155px / 604px 930px no-repeat,
     url(../img/семья\ 1920.png) top 34px right -160px / 988px 1334px no-repeat,
@@ -202,20 +208,19 @@ nav {
     url(../img/Ellipse\ 16.png) top 1030px left 170px / 485px no-repeat,
 
     
-    url(../img/Group\ 91.png) top 2160px left 200px / 2159px 781px no-repeat,
+    /* url(../img/Group\ 91.png) top 2160px left 200px / 2159px 781px no-repeat, */
     
+    url(../img/Group\ 96.png) top 3150px center / 2884px 1239px no-repeat,
+
+
     url(../img/Group\ 93.png) top 2350px left 220px / 536px 403px no-repeat,
     url(../img/Group\ 92.png) top 1950px right 20% / 683px 613px no-repeat,
-    
-    url(../img/goldenconfetti2\ 1.png) top 2950px center / 2884px 1239px no-repeat,
-    
-    url(../img/gift\ 10.png) top 2800px left 25% / 227px 245px no-repeat,
-    url(../img/Group\ 148.png) top 4700px left 20% / 227px 245px no-repeat,
+        
+    url(../img/gift\ 10.png) top 2800px left 25% / 272px 294px no-repeat,
     
 
-    url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
     
-    url(../img/gift\ 30.png) top 4300px right 400px / 305px 311px no-repeat,
+    url(../img/Group\ 150.png) bottom -750px center / 2905px no-repeat,
 
 
     url(../img/Ellipse\ 15.png) top 1000px left -90px / 2200px no-repeat;
@@ -229,7 +234,6 @@ nav {
     margin: 0 auto;
     background: url(../img/gift\ 14.png) top 1860px left 55% / 194px 256px no-repeat,
     
-    url(../img/ui_icon_34.png) top 3660px left 25% / 696px 571px no-repeat;
 
 
 }
@@ -241,7 +245,93 @@ nav {
 
 /* форма */
 
-.form{
+
+.form_element.error input[type="text"],
+.promocode_pole.error input[type="text"],
+.form_element.error input[type="phone"]{
+    border-color: red;
+}
+input[type="checkbox"] {
+    display: none;
+}
+    
+label {
+    color: #000;
+    cursor: default;
+    font-weight: normal;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.flex_div_1 .form_element .error-lable{
+    color: red;
+    padding: 0;
+}
+
+
+
+.registered .close-btn2 {
+	position: absolute;
+	top: 33px;
+	right: 33px;
+	width: 21px;
+	height: 21px;
+	padding: 10px;
+	line-height: 40%;
+	letter-spacing: -10px;
+	font-size: 50px;
+	cursor: pointer;
+}
+
+.registered{
+    padding: 70px 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.registered img{
+    width: 293px;
+    height: 206px;
+}
+.registered p{
+    font-family: Raleway-Regular;
+    font-size: 32px;
+    color:#835FB5;
+}
+
+
+
+.flex_div_2 .checkboxInp:before {
+    content: " ";
+    color: rgb(93, 65, 135);
+    display: inline-block;
+    /* шрифт Awesome*/
+    font: 20px/20px FontAwesome;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    border: 1px solid rgba(115, 81, 166, 1);
+    
+    border-image: initial;
+    vertical-align: middle;
+}
+input:checked + .checkboxInp:before {
+/* глифон - галочка */
+    content: "\f00c";
+}
+
+input:disabled + .checkboxInp:before {
+    background: #eee;
+    color: #aaa;
+}
+
+
+form{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -279,8 +369,8 @@ nav {
 }
 .popup .close-btn{
     position: absolute;
-    top: 44px;
-    right: 44px;
+    top: 33px;
+    right: 33px;
     width: 21px;
     height: 21px;
     padding: 10px;
@@ -289,7 +379,7 @@ nav {
     font-size: 50px;
     cursor: pointer;
 }
-.form h1{
+form h1{
     text-align: center;
     color: #7351A6;
     text-align: center;
@@ -333,8 +423,7 @@ nav {
     gap: 6px;
 }
 .form_div_2 .form_element button,
-.form_div_2 .form_element button:active
-    {
+.form_div_2 .form_element button:active{
     background-color: rgba(115, 81, 166, 1);
     font-family: Raleway-SemiBold;
     color: #ffffff;
@@ -355,9 +444,8 @@ nav {
     flex-direction: column;
     gap: 12px;
 }
-.flex_div_1 .form_element input[type="text"],
-.flex_div_1 .form_element input[type="phone"],
-.flex_div_1 .form_element .promocode_pole input[type="text"]{
+.form_element input[type="text"],
+.form_element input[type="phone"]{
     width: 438px;
     height: 32px;
     font-variant-numeric: lining-nums proportional-nums;
@@ -388,6 +476,21 @@ nav {
     flex-direction: column;
     gap: 4px;
 }
+
+/* .flex_div_1 .form_element input[type="text"]:invalid,
+.flex_div_1 .form_element input[type="phone"]:invalid,
+.flex_div_1 .form_element .promocode_pole input[type="text"]:invalid {
+    border: 1px solid rgb(255, 0, 0);
+}
+.flex_div_1 .form_element input[type="text"]:valid,
+.flex_div_1 .form_element input[type="phone"]:valid,
+.flex_div_1 .form_element .promocode_pole input[type="text"]:valid {
+    border: 1px solid rgb(0, 255, 0);
+} */
+
+
+
+
 .form_element .add{
     display: flex;
     gap: 7px;
@@ -479,9 +582,14 @@ nav {
 }
 /* КАК ВЫИГРАТЬ */
 .howToPlay{
-    margin-top: 179px;
+    padding-top: 179px;
+    margin-left: -82px;
+    margin-right: -82px;
+    background: url(../img/gift\ 14.png) top 70px center / 223px 288px no-repeat;
 }
 .howToPlay__element{
+    margin-left: 82px;
+    margin-right: 82px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -491,28 +599,31 @@ nav {
     font-size: 28px;
     font-variant-numeric: lining-nums proportional-nums;
 }
-
-.component1 img{
-    width: 366px;
-    height: 252px;
-}
 .component1{
     display: flex;
-    
-}
-.component3{
-    display: flex;
-    justify-content: end;
+    margin-left: 530px;
+    margin-top: 150px;
 }
 .component2{
     display: flex;
     justify-content: center;
+    margin-left: 450px;
 }
-.component2 img{
-    width: 227px;
-    height: 242px;
-    
+.component3{
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
+    margin-bottom: 200px;
 }
+.howToPlay__element2{
+    background: url(../img/Group\ 95.png) center center / 2138px 1039px;
+    height: 1040px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+
 .component1 p,.component2 p,.component3 p{
     font-size: 32px;
     font-variant-numeric: lining-nums proportional-nums;
@@ -540,12 +651,21 @@ nav {
     cursor: pointer;
     font-size: 20px;
 }
+.button_promo_code_3{
+    display: none;
+}
 /* ГЛАВНЫЙ ПРИЗ */
 .TheMainPrize .TheMainPrize_text2{
-    float: right;
+    display: flex;
+    justify-content: end;
 }
 .TheMainPrize{
-    margin-top: 300px;
+    margin-left: -83px;
+    margin-right: -82px;
+    height: 1239px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .TheMainPrize p{
     color: #400F65;
@@ -559,9 +679,22 @@ nav {
     align-items: center;
 }
 .TheMainPrize img{
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    max-width: 100%;
+    max-width: 1680px;
     max-height: 306px;
+    margin-left: 83px;
+    margin-right: 83px;
+}
+.TheMainPrize_text1{
+    margin-left: 83px;
+    margin-right: 83px;
+    margin-top: -200px;
+}
+.TheMainPrize_text2{
+    margin-left: 83px;
+    margin-right: 83px;
 }
 .TheMainPrize span{
     color: #400F65;
@@ -574,7 +707,6 @@ nav {
 }
 /* ПОБЕДИТЕЛИ */
 .Winners{
-    margin-top:497px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -646,7 +778,35 @@ nav {
     font-variant-numeric: lining-nums proportional-nums;
     animation-duration: 0.5s;
     animation-name: fadeInDown2;
-    
+}
+.QuestionsAndAnswers details[open]{
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+}
+.QuestionsAndAnswers details summary{ 
+    list-style-type: none;
+    font-size: 32px;
+    font-family: Raleway-SemiBold ;
+    transition: .3s;
+    display: flex;
+    justify-content: space-between;
+}
+.QuestionsAndAnswers details summary .img_rotate{
+    width: 52px;
+    height:35px;
+    transition: .3s;
+    background: url(../img/Component\ 2.png) center right  0 / 45px no-repeat;
+}
+.QuestionsAndAnswers details[open] summary .img_rotate{
+    transform: rotate(180deg);
+    transition: .3s;
+
+}
+.QuestionsAndAnswers details p{
+    font-size: 24px;
+    font-family: Raleway-Regular;
+    transition: .3s;
+    margin-top: 10px;
 }
 @keyframes fadeInDown {
     0% {
@@ -668,36 +828,72 @@ nav {
         transform: translateY(0);
     }
 }
-@keyframes rotait {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(180deg);
-    }
-}
-.QuestionsAndAnswers details[open]{
-    animation-name: fadeInDown;
-    animation-duration: 0.5s;
-}
-.QuestionsAndAnswers details summary{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 32px;
-    font-family: Raleway-SemiBold ;
-    transition: .3s;
-}
-.QuestionsAndAnswers details[open] summary img{
-    animation-name: rotait;
-    animation-duration: 0.5s;
-}
-.QuestionsAndAnswers details p{
+/* футер */
+footer{
+    background: rgba(64, 15, 101, 1);
+    height: 494px;
+    margin: 0 auto;
+    font-family: Raleway-Medium;
+    color: #ffffff;
     font-size: 24px;
-    font-family: Raleway-Regular;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_centor{
+    margin: 0 auto;
+    max-width: 1680px;
+    padding: 0px 80px;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer_element1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.footer_element1 .element1_1,.footer_element1 .element1_2,.footer_element1 .element1_3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.element1_3 .telephone{
+    color: rgb(255, 255, 255);
+    font-family: Raleway-Bold;
+}
+.footer_element2{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.footer_element2 p {
+    gap: 40px;
+    font-size: 18px;
+    color: rgba(255,255,255,.5);
+}
+.icon{
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+.telephone2{
+    color: #FFF;
+    text-decoration: none;
+    font-variant-numeric:lining-nums proportional-nums; 
+}
+.icon .vk__icon,.icon .ok__icon,.icon .tg__icon{
+    opacity: 50%;
+    transition: .3s;
+
+}
+.icon .vk__icon:hover,.icon .ok__icon:hover,.icon .tg__icon:hover{
+    opacity: 100%;
     transition: .3s;
 }
+
+
 
 
 
@@ -714,17 +910,16 @@ nav {
         url(../img/Ellipse\ 14.png) top 0px left calc(100vw / 3.586) / 1894px no-repeat,
     
         
+        url(../img/Group\ 96.png) top 3150px center / 2884px 1239px no-repeat,
         
-        url(../img/Group\ 91.png) top 2160px center / 2159px 781px no-repeat,
 
         url(../img/Group\ 93.png) top 2350px right calc(100vw / 1.320) / 536px 403px no-repeat,
         url(../img/Group\ 92.png) top 1950px left calc(100vw / 1.696) / 683px 613px no-repeat,
 
-        url(../img/goldenconfetti2\ 1.png) top 2950px center / 2884px 1239px no-repeat,
+        url(../img/Group\ 150.png) bottom -750px center / 2905px no-repeat,
 
-        url(../img/Group\ 94.png) top 3100px center/ 1973px 1012px no-repeat,
 
-        url(../img/gift\ 30.png) top 4300px left calc(100vw / 1.386) / 305px 311px no-repeat,
+
 
 
         url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
@@ -734,6 +929,49 @@ nav {
     } */
 }
 @media (max-width: 1920px){
+    .TheMainPrize{
+        background: url(../img/Group\ 96.png) center center / 150.21vw 64.53vw /*2884px 1239px*/ no-repeat;
+        height: 64.53vw /*1239px*/;
+    }
+    .gift p, .howToPlay__element p, .Winners p, .QuestionsAndAnswers p {
+        font-size: 2.50vw;
+    }
+    .component1 p, .component2 p, .component3 p {
+        font-size: 1.67vw;
+    }
+    .TheMainPrize_text1 {
+        margin-top: -10.42vw/*-200px*/;
+    }
+    .QuestionsAndAnswers details summary {
+        font-size: 1.67vw;
+    }
+    .QuestionsAndAnswers details p {
+        font-size: 1.25vw;
+    }
+    
+    .content{
+    
+        background: url(../img/Group\ 127.png) top 15px right calc(100vw / 1.330) / 604px 930px no-repeat,
+        url(../img/семья\ 1920.png) top 34px left calc(100vw / 1.786) / 988px 1334px no-repeat,
+        url(../img/Group\ 130.png) top 905px left calc(100vw / 3.586) / 620px 395px no-repeat,
+        url(../img/Group\ 124.png) top 635px left calc(100vw / 2.450) / 485px 545px no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 485px no-repeat,
+        url(../img/Ellipse\ 14.png) top 0px left calc(100vw / 3.586) / 1894px no-repeat,
+    
+        
+        
+
+        url(../img/Group\ 93.png) top 2350px right calc(100vw / 1.320) / 536px 403px no-repeat,
+        url(../img/Group\ 92.png) top 1950px left calc(100vw / 1.696) / 683px 613px no-repeat,
+
+
+
+
+
+        url(../img/Group\ 150.png) bottom -750px center / 2905px no-repeat,
+        
+        url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
+    }
     .button, .button_promo_code, .telephone{
         font-size: 1vw;
     }
@@ -741,12 +979,15 @@ nav {
         width: 228px;
         height: 34px;
     }
+    .footer_centor {
+        width: 93.33vw;
+        max-width: none;
+    }
     nav{
         max-width: 90vw;
     }
     .prize{
         font-size: 14.06vw;
-        margin-left: 4.5vw;
     }
     .content1_eliment{
         font-size: 0.94vw;        
@@ -765,38 +1006,394 @@ nav {
         font-size: 14.06vw;
     }
     .content1_eliment3 p {
-        font-size: 1.15vw;
+        font-size: 22px;
     }
+    .gift__element{
+        width: 21.09vw;
+        height: 11.98vw;
+    }
+    .gift__element img{
+        width: 21.09vw;
+        height: 14.06vw;
+    }
+    .gift .gift__element p{
+        font-size: 1.39vw;
+    }
+    /* главный приз */
+    .TheMainPrize p {
+        font-size: 7.81vw;
+    }
+    .TheMainPrize span {
+        font-size: 14.84vw;
+    }
+
+
+    .Winners_ul_element p {
+        font-size: 1.25vw;
+    }
+    .Winners_element {
+     max-width: 72.71vw;
+    }
+    .Winners_ul {
+        width: 69.58vw;
+    }
+    .Winners_ul_element {
+        width: 68.02vw;
+    }
+    .QuestionsAndAnswers details {
+        width: 72.71vw;
+    }
+    .WinTel {
+        width: 10.42vw;
+    }
+    .WinGift {
+        width: 19.79vw;
+    }
+
+}
+@media (max-width: 1800px){
+    /* как выиграть */
+    .howToPlay__element2{
+        height: 57.78vw;
+    }
+    
+    footer{
+        font-size: 1.33vw;
+        height: 27.44vw;
+    }
+    .footer_centor {
+        gap:4.03vw;
+    }
+    .howToPlay__element .date23-30 {
+        font-size: 1.50vw;
+    }
+    .footer_element2 p {
+        grid-column: 1 / span 2;
+    }
+    .gift {
+        margin-top: 340px
+    }
+    .howToPlay__element2{
+        background: url(../img/Group\ 95.png) center center / 118.78vw 57.72vw;
+    }
+    .component1{
+        margin-left: 29.44vw/*530px*/;
+        margin-top: 8.33vw/*150px*/;
+    }
+    .component2{
+        margin-left: 25vw/*450px*/;
+    }
+    .component3{
+        margin-right: 4.44vw/*80px*/;
+        margin-bottom: 11.11vw/*200px*/;
+    }
+    .howToPlay{
+        background: url(../img/gift\ 14.png) top 70px center / 12.39vw 16vw /*223px 288px*/ no-repeat;
+    }
+
+    .content{
+    
+        background: url(../img/Group\ 127.png) top 15px left -10.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1440.png) top 34px right 0 / 710px 1289px no-repeat,
+        url(../img/Group\ 130.png) top 50.28vw/*905px*/ right 750px / 34.44vw 21.94vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 635px right 590px / 26.94vw 30.28vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 485px no-repeat,
+        url(../img/Ellipse\ 14.png) top 0px right -500px / 1894px no-repeat,
+
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 118.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+
+
+
+        url(../img/Group\ 150.png) bottom -750px center / 2724px no-repeat,
+
+
+
+        url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
+    }
+    .content_centor{
+        max-width: 1850px;
+        margin: 0 auto;
+        background: url(../img/gift\ 14.png) top 1860px left 55% / 194px 256px no-repeat,
+        
+    
+    
+    }
+
 }
 @media (max-width: 1440px){
     .button, .button_promo_code, .telephone{
         font-size: 14px;
     }
+    
     .logo{
         width: 207px;
         height: 31px;
     }
+
+    .prize{
+        font-size: 13.19vw;
+    }
+    .content1_eliment1 {
+        font-size: 1.25vw;
+    }
+    .content1_eliment1_1 {
+        font-size: 3.33vw;
+    }
+    .content1_eliment2 {
+        font-size: 7.22vw;
+    }
+    .content1_eliment2_1 {
+        font-size: 13.89vw;
+    }
+    .content1_eliment3 p {
+        font-size: 1.53vw;
+    }
+    .gift {
+        margin-top: 200px;
+    }
+    .gift__element img {
+        width: 21.11vw;
+        height: 14.10vw;
+    }
+    .gift__element img {
+        transform: translateY(-4.86vw);
+    }
+    .gift .gift__element p{
+        transform: translateY(-6.81vw);
+    }
+    .gift__element {
+        width: 21.18vw;
+        height: 12.08vw;
+    }
+
+    .Winners_ul_element p {
+        font-size: 1.25vw;
+    }
+    .Winners_element {
+        max-width: 1064px;
+        height: 420px;
+    }
+    .Winners_ul {
+        width: 1004px;
+        height: 360px;
+    }
+    .Winners_ul_element {
+        width: 974px;
+    }
+    .QuestionsAndAnswers details {
+        width: 1004px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+    .content_margin {
+        margin-left: 5.69vw;
+        margin-right: 5.69vw;
+    }
+    .howToPlay {
+        margin-left: -5.69vw;
+        margin-right: -5.69vw;
+    }
+    .TheMainPrize {
+        margin-left: -5.69vw;
+        margin-right: -5.69vw;
+    }
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -10.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1260.png) top 34px right 0 / 626px 1007px no-repeat,
+        url(../img/Group\ 130.png) top 50.28vw/*905px*/ right 750px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 635px right 500px / 15.84vw 18.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 485px no-repeat,
+        url(../img/Ellipse\ 14.png) top 0px right -500px / 1894px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 118.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -900px center  / 2953px 3993px no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
+    }
+    
+    
+    
+    
 }
 @media (max-width: 1260px){
     .button, .button_promo_code, .telephone{
         font-size: 14px;
     }
+
+
+    footer{
+        height: 30.57vw;
+    }
+    .footer_element2 , .footer_element1 .element1_1, .footer_element1 .element1_2, .footer_element1 .element1_3 {
+        gap: 15px;
+    }
+    .button_promo_code_2 {
+        font-size: 16px;
+    }
+    .Winners_ul_element p {
+        font-size: 1.59vw;
+    }
+    .Winners_element {
+        max-width: 84.44vw;
+    }
+    .Winners_ul {
+        width: 79.68vw;
+    }
+    .Winners_ul_element {
+        width: 77.30vw;
+    }
+    .QuestionsAndAnswers details {
+        width: 79.68vw;
+    }
+
+    .prize {
+        font-size: 11.90vw;
+    }
+    .content1_eliment1 {
+        font-size: 1.27vw;
+    }
+    .content1_eliment1_1 {
+        font-size: 3.65vw;
+    }
+    .content1_eliment2 {
+        font-size: 7.62vw;
+    }
+    .content1_eliment2_1 {
+        font-size: 14.29vw;
+    }
+
+    .component1 p, .component2 p, .component3 p{
+        font-size: 1.59vw;
+    }
     .logo{
         width: 207px;
         height: 31px;
     }
-    nav{
-        max-width: 94vw;
-    }
     .bg-popup{
         max-width: 88.91vw;
     }
+
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -10.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1260.png) top 34px right 0 / 626px 1007px no-repeat,
+        url(../img/Group\ 130.png) top 50.28vw/*905px*/ right 738px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 635px right 500px / 15.84vw 18.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 485px no-repeat,
+        url(../img/Ellipse\ 14.png) top 0px right -500px / 1894px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 118.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -900px center  / 234.37vw 316.90vw /*2953px 3993px*/ no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px right calc(90vw / 5.986) / 2200px no-repeat;
+    }
+
 }
 @media (max-width: 1170px){
-    .form h1{
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -10.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1024.png) top 34px right 0 / 376px 747px no-repeat,
+        url(../img/Group\ 130.png) top 54.58vw/*905px*/ left 110px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 450px right 320px / 15.84vw 18.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 385px no-repeat,
+        url(../img/Ellipse\ 14.png) top -150px right -600px / 1524px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 118.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -500px center  / 234.37vw 316.90vw no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px left -200px / 800px no-repeat;
+    }
+    .QuestionsAndAnswers details summary .img_rotate {
+        width: 52px;
+        height: 27px;
+    }
+
+    .button_promo_code_3{
+        display: block;
+        width: 230px;
+        margin-top: 85px;
+        box-shadow: 0px 9.58653px 73.30875px 0px rgba(91, 33, 165, 0.80);
+        padding: 20px 30px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        font-weight: 700;
+        font-family: Raleway-Bold;
+        color: rgba(64, 15, 101, 1);
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .gift {
+        margin-top: 36px;
+    }
+    .content1_eliment4{
+        display: flex;
+        justify-content: center;
+    }
+    .button_promo_code{
+        position: absolute;
+        bottom: 200px;
+        z-index: 6;
+        display: none;
+    }
+    
+    .burger-checkbox:checked ~ .button_promo_code{
+        display: block;
+        transform: translate(-50% , -50%);
+        position: fixed;
+        bottom: 30px;
+        left: 50%;        
+    }
+    nav{
+        height: 55px;
+    }
+
+
+    
+
+
+
+
+    .menu-list li {
+        margin-left: 5.11vw;
+    }
+
+    /* .gift__element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 17.29vw;
+        height: 11.52vw;
+    }
+    .gift__element img {
+        width: 17.29vw;
+        height: 12.1vw;
+    }
+    .gift .gift__element p {
+        transform: translateY(-4.8vw);
+        width: 15vw;
+    } */
+    
+
+    .content1_eliment1 {
+        font-size: 1.57vw;
+    }
+    .content1_eliment1_1 {
+        font-size: 4.93vw;
+    }
+    .content1_eliment2 {
+        font-size: 8.03vw;
+    }
+    .content1_eliment2_1 {
+        font-size: 15.04vw;
+        margin-bottom: -18px;
+    }
+    .content1_eliment3 p {
+        font-size: 1.77vw;
+    }
+
+    form h1{
         font-size: 27px;
     }
-    nav ul, .button_promo_code{
+    nav ul{
         display:none
     }
     .burger-checkbox,.burger{
@@ -806,14 +1403,8 @@ nav {
         position: absolute;
         visibility: hidden;
       }
-      nav{
-        z-index: 2;
-      }
-      .logo{
-        z-index: 2;
-      }
+      
       .burger {
-        position: relative;
         z-index: 2;
         cursor: pointer;
         display: block;
@@ -822,6 +1413,7 @@ nav {
         background: transparent;
         width: 40px;
         height: 26px;
+        right: 10px;
     }
       .burger::before,
       .burger::after {
@@ -842,36 +1434,53 @@ nav {
       .burger::after {
         bottom: 0;
         /* transition: bottom .3s .15s, transform .3s; */
-      }
+      } 
       .menu-list {
         top: 0;
         left: 0;
+        height: 100%;
         position: absolute;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         gap: 12px;
-        padding: 0px 0 100vw 0px ;
+        padding: 30px 0px 0px 0px ;
         margin: 0;
-        margin-top: 100px;
+        margin-top: 105px;
         background: rgba(131, 95, 181, 1);
         list-style-type: none;
         transform: translateX(-100%);
         /* transition: .3s; */
         width: 100%;
         z-index: 1;
-      }
-      .button,.telephone {
+    }
+
+    
+    .menu-list li:first-child {
+        order: 6;
+    }
+    .button {
         display: block;
         padding: 8px;
         color: white;
         font-size: 22px;
         font-family: Raleway-SemiBold;
         text-decoration: none;
+    }
+    .telephone{
+        display: block;
+        padding: 8px;
+        color: white;
+        font-size: 22px;
+        text-decoration: none;
+        font-family: Raleway-Bold;
       }
       .button:hover,.telephone:hover {
         background: rgba(255,255,255,.2)
       }
       .burger-checkbox:checked ~ .menu-list {
-        transform: translateX(0);
+        transform: translateX(0); 
       }
       /* анима */
       .burger-checkbox:checked + .burger::before {
@@ -887,16 +1496,490 @@ nav {
       }
       /* аним */
 }
-@media (max-width: 320px){
+
+@media (max-width: 1024px){
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -12.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1024.png) top 34px right 0 /  36.72vw 72.95vw /*376px 747px*/ no-repeat,
+        url(../img/Group\ 130.png) top 54.58vw/*905px*/ left 220px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 43.95vw right 31.25vw / 15.84vw 18.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 385px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 150.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -500px center  / 234.37vw 316.90vw no-repeat,
+        url(../img/Ellipse\ 14.png) top -150px right -600px / 1524px no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px left -200px / 800px no-repeat;
+    }
+    .footer_element2 p ,.footer_element2 img{
+        grid-column: 1/ span 3;
+    }
+    footer {
+        height: 40vw;
+        font-size: 16px;
+    }
+    .QuestionsAndAnswers details summary .img_rotate {
+        background: url(../img/Component\ 2.png) center center / 35px no-repeat;
+    }
+    .QuestionsAndAnswers details summary {
+        font-size: 22px;
+    }
+    .QuestionsAndAnswers details p {
+        font-size: 18px;
+    }
+
+
+    .date23-30_3 {
+        display: block;
+        color: #FFF;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: Raleway-ExtraBold;
+        font-style: normal;
+        font-size: 2.57vw;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-top: 24px;
+        display: flex;
+        gap: 40px;
+    }
+    .date23-30_2 {
+        display: none;
+    }
+    .registered p {
+        font-size: 3.13vw;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px){
+
+    .button_promo_code_3 {
+        width: 200px;
+        text-align: center;        
+        font-size: 12px;
+        padding: 15px;
+    }
+
+
+
+
+
+    .flex_div_1 .form_element input[type="text"], .flex_div_1 .form_element input[type="phone"], .flex_div_1 .form_element .promocode_pole input[type="text"] {
+        width: 57.03vw;
+        height: 4.17vw;
+
+    }
+    form h1 {
+        font-size: 3.52vw;
+    }
+    .form_div_2 .form_element input[type="submit"], .form_div_2 .form_element input[type="submit"]:active {
+        background-color: rgba(115, 81, 166, 1);
+        font-family: Raleway-SemiBold;
+        color: #ffffff;
+        border-radius: 1.56vw;
+        font-size: 2.60vw;
+        padding: 2.60vw 4.17vw;
+        width: 57.03vw;
+        height: 8.07vw;
+        border: none;
+        outline: none;
+    }
+    .popup {
+        width: 61.20vw;
+    }
+    .flex_div_1 .form_element .promocode_pole {
+        width: 63.54vw;
+        max-height: 25vw;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .flex_div_2 .form_element label {
+        font-size: 2.08vw;
+    }
+    .form_div_2 .form_element p {
+        font-size: 1.82vw;
+    }
+    
+    
+
+    .button_promo_code_2 {
+        font-size: 12px;
+        padding: 15px;
+
+    }
+    .gift__element {
+        width: 42.18vw;
+        height: 24.08vw;
+    }
+    .gift__element img {
+        width: 42.11vw;
+        height: 28.1vw;
+    }
+    .gift .gift__element p {
+        transform: translateY(-12.81vw);
+        font-size: 2.69vw;
+    }
+    .gift__element img {
+        transform: translateY(-10.86vw);
+    }
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -12.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1024.png) top 34px right 0 /  36.72vw 72.95vw /*376px 747px*/ no-repeat,
+        url(../img/Group\ 130.png) top 54.58vw/*905px*/ left 220px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 43.95vw right 31.25vw / 15.84vw 18.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 385px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 70.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -500px center  / 234.37vw 316.90vw no-repeat,
+        url(../img/Ellipse\ 14.png) top -150px right -450px / 1024px no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px left -200px / 800px no-repeat;
+    }
+    .TheMainPrize {
+        background: url(../img/Group\ 156.png) top -50px center / 155vw 220vw /*2884px 1239px*/ no-repeat;
+        height: 200vw /*1239px*/;
+        justify-content: flex-start;
+    }
+    .TheMainPrize_text1 {
+        margin-top: 36.579999999999998vw/*-200px*/;
+    }
+
+
+    
+
+    
+    .howToPlay {
+        padding-top: 35px;
+    }
+    .howToPlay__element2 {
+        height: 157.72vw;
+    }
+    .howToPlay__element2 {
+        background: url(../img/Group\ 154.png) top 10vw center / 100vw 157.72vw no-repeat;
+    }
+    .howToPlay__element {
+        margin-left: 5.70vw;
+        margin-right: 5.70vw;
+    }
+    .howToPlay__element p {
+        font-size: 3.40vw;
+        width: 100px;
+    }
+    .howToPlay__element .date23-30{
+        font-size: 3vw;
+        width: 160px;
+        text-align: right;
+    }
+    .button_promo_code_2 {
+        transform: translateY(-50px);
+    }
+
+    .TheMainPrize img {
+        max-width: 1680px;
+        max-height: 306px;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .TheMainPrize_text1 {
+        margin-left: 33px;
+        margin-right: 33px;
+        
+    }
+    .gift p, .howToPlay__element p, .QuestionsAndAnswers p {
+        font-size: 3.50vw;
+    }
+    .Winners p{
+        font-size: 2.08vw;
+    }
+
+
+    .TheMainPrize p {
+        font-size: 8.81vw;
+    }
+    .TheMainPrize span {
+        font-size: 15vw;
+        padding-top: 10px;
+    }
+
+    .QuestionsAndAnswers details summary {
+        font-size: 20px;
+    }
+
+
+    .WinName{
+        margin-top: 15px;
+        width: 100px;
+        grid-row: 1/span 1;
+    }
+    .WinTel {
+        margin-top: 10px;
+        width: 100px;
+        grid-column: 2/ span 1;
+    }
+    .WinGift{
+        margin-bottom: 10px;
+        grid-column: 2/ span 1;
+        width: 200px;
+    }
+    .Winners_ul_element {
+        gap: 2px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+
+    
+
+    
+    .footer_centor {
+        padding: 0px 13px;
+        gap: 14.030000000000001vw;
+    }
+
+
+    footer {
+        height: 70vw;
+        font-size: 16px;
+    }
+    .footer_element2 p, .footer_element1 .element1_1, .footer_element1 .element1_2, .footer_element1 .element1_3 {
+        gap: 10px;
+        font-size: 14px;
+    }
+    .footer_element2 img{
+        width: 200px;
+    }
+
+    .component1 {
+        margin-left: 57.44vw/*530px*/;
+        margin-top: 19.13vw/*150px*/;
+    }
+    .component2 {
+        margin-left: -40vw/*450px*/;
+        margin-bottom: 8.11vw/*200px*/;
+
+    }
+    .component3 {
+        margin-right: 17.44vw/*80px*/;
+        margin-bottom: 20.11vw/*200px*/;
+    }
+    .component1 p, .component2 p, .component3 p {
+        font-size: 3.59vw;
+    }
+    footer {
+        height: 70vw;
+        font-size: 16px;
+    }
+
+
+    .gift {
+        margin-top: 90px;
+    }
+    .gift .gift__flex {
+        row-gap: 9.90vw;
+    }
+    .form_div_2 .form_element {
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form_div_2 .form_element button, 
+    .form_div_2 .form_element button:active {
+        font-size: 2.60vw;
+        padding: 2.60vw 4.17vw;
+        width: 61.20vw;
+    }
+}
+@media (max-width: 540px){
+
+    .registered p {
+        font-size: 4.13vw;
+    }
+    form h1 {
+        font-size: 5vw;
+    }
+    form {
+        gap: 15px;
+    }
+
+    
+
+
+
+    .content{
+        background: url(../img/Group\ 127.png) top 15px left -12.42vw / 41.94vw 64.58vw  /*604px 930px*/ no-repeat,
+        url(../img/семья\ 1024.png) top 55.26vw right -8.70vw /  66.72vw 125.95vw /*376px 747px*/ no-repeat,
+        url(../img/Group\ 130.png) top 54.58vw/*905px*/ left 220px / 27.55vw 17.55vw /*620px 395px*/ no-repeat,
+        url(../img/Group\ 124.png) top 90.95vw left 11.25vw / 25.84vw 28.17vw /*485px 545px*/ no-repeat,
+        url(../img/Ellipse\ 16.png) top 1030px right calc(100vw / 1.350)  / 385px no-repeat,
+        url(../img/Group\ 93.png) top 140.56vw/*2350px*/ left -100px / 27.92vw 20.99vw/*536px 403px*/ no-repeat,
+        url(../img/Group\ 92.png) top 70.33vw/*1950px*/ left calc(100vw / 1.696) / 37.94vw 34.06vw /*683px 613px*/no-repeat,
+        url(../img/Group\ 152.png) bottom -500px center  / 234.37vw 316.90vw no-repeat,
+        url(../img/Ellipse\ 14.png) top -150px right -450px / 1024px no-repeat,
+        url(../img/Ellipse\ 15.png) top 1000px left -200px / 800px no-repeat;
+    }
+
+
+    .flex_div_1 .form_element label {
+        font-size: 2.08vw;
+    }
+    .bg-popup {
+        max-width: 95.91vw;
+    }
+    .popup {
+        width: 85.2vw;
+    }
+    .flex_div_1 .form_element input[type="text"], .flex_div_1 .form_element input[type="phone"], .flex_div_1 .form_element .promocode_pole input[type="text"] {
+        width: 74.03vw;
+        height: 4.17vw;
+    }
+    .flex_div_1 .form_element .promocode_pole {
+        width: 85.03vw;
+    }
+    .flex_div_1 .form_element label {
+        font-size: 3.08vw;
+    }
+    .flex_div_2 .form_element label {
+        font-size: 3vw;
+    }
+    .form_div_2 .form_element p {
+        font-size: 3.3vw;
+    }
+
+
+
+    
+    .menu-list {
+        margin-top: 85px;
+    }
     .logo{
         width: 200px;
         height: 31px;
     }
-    nav{
-        max-width: 288px;
-        max-height: 44px;
-        
+    .margin_nav {
+        margin-left: 5px;
+        margin-right: 5px;
     }
+
+    .footer_element1 {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 36px;
+    }
+
+    footer {
+        height: 127vw;
+        font-size: 16px;
+    }
+    .footer_element1 .element1_3 {
+        gap: 36px;
+    }
+    .telephone2 {
+        font-size: 22px;
+    }
+
+
+    .Winners .Win{
+        font-size: 16px;
+    }
+
+    nav {
+        height: 35px;
+    }
+
+
+
+
+    .Winners p {
+        font-size: 3.08vw;
+    }
+    .Winners{
+        gap: 20px;
+    }
+    .QuestionsAndAnswers p {
+        margin-bottom: 5px;
+    }
+    .content{
+        padding-bottom: 50px;
+    }
+
+    .QuestionsAndAnswers {
+        margin-top: 40px;
+    }
+
+    .QuestionsAndAnswers details summary {
+        font-size: 16px;
+    }
+    .QuestionsAndAnswers details{
+        padding: 13px;
+    }
+    .QuestionsAndAnswers p{
+        font-size: 20px;
+    }
+
+    .WinGift{
+        width: 100px;
+    }
+
+    .footer_element2 p, .footer_element1 .element1_1, .footer_element1 .element1_2, .footer_element1 .element1_3 {
+        font-size: 12px;
+    }
+
+    .element1_1{
+        grid-column: 1/ span 2;
+        grid-row: 1;
+    }
+    .element1_2{
+        grid-row: 1;
+
+        grid-column: 2 ;
+    }
+    .element1_3{
+        grid-column: 1/ span 2;
+    }
+
+    .prize {
+        font-size: 16.90vw;
+    }
+    .content1_eliment1_1 {
+        font-size: 7.93vw;
+    }
+    .content1_eliment2 {
+        font-size: 12.03vw;
+    }
+    .content1_eliment2_1 {
+        font-size: 21.04vw;
+        margin-bottom: -18px;
+    }
+    .content1_eliment3 p{
+        width: 200px;
+    }
+    .content1_eliment3 {
+        font-size: 1.97vw;
+        width: 200px;
+        flex-wrap: wrap;
+    }
+
+    .content1_eliment1{
+        margin-top: 25px;
+    }
+
+    .content1_eliment3 p {
+        font-size: 3.27vw;
+    }
+
+    
+
+}
+
+
+
+@media (max-width: 320px){
 }
 
 

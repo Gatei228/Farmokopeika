@@ -9,48 +9,56 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="scrolOff">
     <div class="header">
         <div class="margin_nav">
             <nav>
                 <img class="logo" src="img/logo 1 (2).png" alt="logo">
-                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-                <label for="burger-checkbox" class="burger"></label>            
+                <input type="checkbox" id="burger_checkbox" class="burger-checkbox">
+                <label for="burger_checkbox" class="burger" id="burgerId"></label>            
                 <ul class="menu-list">  
                     <li><a class="telephone" href="tel:88002009707">8-800-200-97-07</a></li>
-                    <li><a href="#gift_anchor" class="button">Призы</a></li>
-                    <li><a class="button">Как выиграть</a></li>
-                    <li class="liWin"><a class="button" >Победители</a></li>
-                    <li><a class="button">Вопросы и ответы</a></li>
+                    <li><a href="#gift_anchor" id="giftButtonId" class="button">Призы</a></li>
+                    <li><a href="#howToPlay_anchor" id="howToPlayAnchorId" class="button">Как выиграть</a></li>
+                    <li class="liWin"><a href="#win_anchor" id="winAnchorId" class="button" >Победители</a></li>
+                    <li><a href="#QuestionsAndAnswers_ahchor" id="QuestionsAndAnswersAhchorId" class="button">Вопросы и ответы</a></li>
                     <li><a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf" class="button">Правила</a></li>
                 </ul>
+
                 <p id="button_promo_code" class="button_promo_code">Зарегистрировать промокод</p>
             </nav>
         </div>
         <div id="popup" class="bg-popup">
             <div class="bg-popup-scrol">
+
+                <div class="registered">
+                    <div id="close-btn2" class="close-btn2">&times;</div>
+                    <img src="img/ui_icon_837.png" alt="">
+                    <p>Ваш промокод успешно зарегистрирован!</p>
+                </div>
+
                 <div class="popup">
                     <div id="close-btn" class="close-btn">&times;</div>
-                    <div class="form">
+                    <form id="add-form">
                         <h1>Регистрация промокода</h1>
                         <div class="form_div_1">
                             <div class="flex_div_1">
                                 <div class="form_element">
                                     <label for="surnameId">Фамилия*</label>
-                                    <input type="text" id="surnameId"  placeholder="Введите Фамилию" required>
+                                    <input  type="text" id="surnameId"  placeholder="Введите Фамилию" >
                                 </div>
                                 <div class="form_element">
                                     <label for="nameId">Имя*</label>
-                                    <input type="text" id="nameId" placeholder="Введите Имя" required>
+                                    <input type="text" id="nameId" placeholder="Введите Имя" >
                                 </div>
                                 <div class="form_element">
                                     <label for="phoneId">Телефон*</label>
-                                    <input type="phone" class="inputTel" id="phoneId" placeholder="+7(___) ___-__-__" required>
+                                    <input type="phone" class="inputTel" id="phoneId" placeholder="+7(___) ___-__-__" >
                                 </div>
                                 <div class="form_element">
                                     <label for="promocodeId">Промокод*</label>
                                     <div class="promocode_pole" id="pole_promocode">
-                                        <input type="text" id="promocodeId" required>
+                                        <input type="text" id="promocodeId">
                                     </div>
                                     <div class="add">
                                         <div class="plus">
@@ -59,24 +67,24 @@
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7109 4.14844H10.7109V10.1484H4.71094V11.1484H10.7109V17.1484H11.7109V11.1484H17.7109V10.1484H11.7109V4.14844Z" fill="black"/>
                                             </svg>
                                         </div>
-                                        <button id="add">Дабвить еще промокод</button>
+                                        <button type="button" id="add">Дабвить еще промокод</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="flex_div_2">
                                 <div class="form_element">
-                                    <input type="checkbox" id="rules">
-                                    <label for="rules">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                                    <input type="checkbox"  id="rules">
+                                    <label class="checkboxInp" for="rules">Согласен (-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label><br>
                                 </div>
                                 <div class="form_element">
-                                    <input type="checkbox" id="rules2">
-                                    <label for="rules2">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
+                                    <input type="checkbox"  id="rules2" >
+                                    <label class="checkboxInp" for="rules2">Согласен (-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label><br>
                                 </div>
                             </div>
                         </div>
                         <div class="form_div_2">
                             <div class="form_element">
-                                <button id="peg">Зарегистрировать промокод</button>
+                                <button type="submit">Зарегистрировать промокод</button>
                             </div>
                             <div class="form_element">
                                 <p>Телефон технической поддержки</p><a href="tel:88002009707">8-800-200-97-07</a>
@@ -92,8 +100,8 @@
                 <div class="content_margin">
                 <p class="prize">200 000 ₽</p>
                 <div class="content1_eliment1">
-                    <p class="content1_eliment1_1">НА ПУТЕШЕСТВИЯ</p>
-                    <p>C 23 ОКТЯБРЯ <br>
+                    <p class="content1_eliment1_1">НА ПУТЕШЕСТВИЕ</p>
+                    <p class="date23-30_2">C 23 ОКТЯБРЯ <br>
                     ПО 30 НОЯБРЯ</p>
                 </div>
                 <div class="content1_eliment2">
@@ -107,7 +115,11 @@
                         <p>Победители будут указаны  <br>
                         в разделе «Победители»</p>
                 </div>
-                
+                <p class="date23-30_3">C 23 ОКТЯБРЯ <br>
+                    ПО 30 НОЯБРЯ</p>
+                <div class="content1_eliment4">
+                    <p id="button_promo_code_3" class="button_promo_code_3">Зарегистрировать промокод</p>
+                </div>
                 <div class="gift" id="gift_anchor">
                     <p>ПРИЗЫ</p>
                     <div class="gift__flex">
@@ -146,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="howToPlay">
+                <div class="howToPlay" id="howToPlay_anchor">
                     <div class="howToPlay__element">
                         <p>КАК ВЫИГРАТЬ?</p>
                         <p class="date23-30">СРОК АКЦИИ C 23 ОКТЯБРЯ ПО 30 НОЯБРЯ</p>
@@ -154,7 +166,6 @@
                     <div class="howToPlay__element2">
                         
                         <div class="component1">
-                            <img src="img/ui_icon_547_2.png" alt="">
                             <p>Совершайте <br>
                                 покупки от 700 ₽ <br>
                                 в сети аптек <br>
@@ -163,14 +174,12 @@
                         </div>
 
                         <div class="component2">
-                            <img src="img/ui_icon_844_2.png" alt="">
                             <p>Регистрируйте <br>
                                 промокоды <br>
                                 с чеков
                             </p>
                         </div>
                         <div class="component3">
-                            <img src="img/ui_icon_765_2.png" alt="">
                             <p>Выигрывайте <br>
                                 желанные <br>
                                 подарки
@@ -186,8 +195,8 @@
                     <img src="img/Frame 42702.png">
                     <p class="TheMainPrize_text2"><span>НА</span> ОТДЫХ</p>
                 </div> 
-                <div class="Winners">
-                    <p>ПОБЕДИТЕЛЬ</p>
+                <div class="Winners" id="win_anchor">
+                    <p class="Win">ПОБЕДИТЕЛЬ</p>
                     <div class="Winners_element_bg">
                         <div class="Winners_element">
                             <div class="Winners_ul" id="Winners_ul">
@@ -196,36 +205,30 @@
                                     <p class="WinTel">+7(***)***-34-52</p>
                                     <p class="WinGift">Анатомическая подушка</p>
                                 </div>
-                                <div class="Winners_ul_element">
-                                    <p class="WinName">Кристина К</p>
-                                    <p class="WinTel">+7(***)***-34-52</p>
-                                    <p class="WinGift">Анатомическая подушка</p>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="QuestionsAndAnswers">
+                <div class="QuestionsAndAnswers" id="QuestionsAndAnswers_ahchor">
                     <p>ВОПРОСЫ И ОТВЕТЫ</p>
                     <details>
-                        <summary>Что нужно сделать чтобы принять участие в акции?<img src="img/Component 2.png" alt=""></summary>
+                        <summary>Что нужно сделать чтобы принять участие в акции? <div class="img_rotate"></div></summary>
                         <p>Совершайте покупки в любой аптеке под брендом «Фармакопейка»<br>
                             на сумму от 700 ₽, регистрируйте промокод из чека и выигрывайте призы.</p>
                     </details>
 
                     <details>
-                        <summary>Как я узнаю, что я победил? <img src="img/Component 2.png" alt=""></summary>
+                        <summary>Как я узнаю, что я победил?<div class="img_rotate"></div></summary>
                         <p>Мы свяжемся с вами по номеру телефона, которые вы указывали при регистрации чека</p>
                     </details>
 
                     <details>
-                        <summary>Где будут объявлены победители?<img src="img/Component 2.png" alt=""></summary>
+                        <summary>Где будут объявлены победители?<div class="img_rotate"></div></summary>
                         <p>Списки победителей будут опубликованы на сайте 01.12.2023 в разделе «Победители»</p>
                     </details>
                     
                     <details>
-                        <summary>Когда будут объявлены победители? <img src="img/Component 2.png" alt=""></summary>
+                        <summary>Когда будут объявлены победители?<div class="img_rotate"></div></summary>
                         <p>01.12.23 — проведем прямой эфир РОЗЫГРЫША призов в группе Вконтакте, в 17:00 <br>
                             по Омскому времени. На сайте в разделе «Победители» появится список победителей</p>
                     </details>
@@ -234,6 +237,41 @@
             </div>    
         </div>
     </div>
+    <footer>
+        <div class="footer_centor">
+            <div class="footer_element1">
+                <div class="element1_1">
+                    <p>Призы</p>
+                    <p>Как выиграть</p>
+                    <p>Победители</p>
+                    <p>Вопросы и ответы</p>
+                </div>
+                <div class="element1_2">
+                    <p>Обратный звонок</p>
+                    <p>Аптеки</p>
+                    <p>&nbsp;</p>
+                    <p>Правила</p>
+                </div>
+                <div class="element1_3">
+                    <div class="icon">
+                        <a href="https://vk.com/farmakopeika"><img  class="vk__icon" src="img/icon/vk.png" alt="wk"></a>
+                        <a href="https://ok.ru/farmakopeika/"><img class="ok__icon" src="img/icon/ok.png" alt="ok"></a>
+                        <a href="https://t.me/farmakopejka"><img class="tg__icon" src="img/icon/tg.png" alt="tg"></a>
+                    </div>
+                    
+                    <a class="telephone2" href="tel:88002009707">8-800-200-97-07</a>
+                </div>
+                
+            </div>
+
+            <div class="footer_element2">
+                <p>© 2023, сеть аптек Фармакопейка®. Все права защищены.</p>
+                <p>ООО «Медэкспорт - Северная звезда»</p>
+                <img src="img/Group 13.png" alt="ferema">
+            </div>
+        </div>
+    </footer>
 <script src="main.js"></script>
+<script src="https://kit.fontawesome.com/5ad0d0c1df.js" crossorigin="anonymous"></script>
 </body>
 </html>
